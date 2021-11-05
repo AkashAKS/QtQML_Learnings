@@ -1,11 +1,11 @@
 import QtQuick 2.12
 
-Item {
+Item {                                           /*For exposing custom element outside use "Item"*/
     id : rootId
-    property alias buttonText: buttonTextId.text
-    width: containerRectId.width
-    height: containerRectId.height
-    signal buttonClicked
+    property alias buttonText: buttonTextId.text /*For exposing properties outside use alias*/
+    width: containerRectId.width                 /*For proper layout use width of container outside*/
+    height: containerRectId.height               /*For proper layout use height of container outside*/
+    signal buttonClicked                         /*For exposing signal outside*/
 
 
     Rectangle {
